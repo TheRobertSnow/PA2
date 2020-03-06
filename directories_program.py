@@ -1,3 +1,4 @@
+import os
 
 class TreeNode:
     def __init__(self, element, name = "", parent=None, left=None, right=None):
@@ -19,6 +20,20 @@ specified and fits with the  expected_out.txt when the tester
 program is run with the original commands.txt.
 Then feel free to make your own, more extensive tests.
 '''
+class Folder:
+    def __init__(self):
+        self.path = os.getcwd()
+
+    def createDir(self):
+        pass
+
+    def listDir(self):
+        pass
+
+    def switchDir(self):
+        pass
+
+    def removeDir(self):
 
 def run_commands_on_tree(tree):
     print("  current directory: " + tree.name)
@@ -61,6 +76,7 @@ def run_directories_program():
     # YOU CAN CHANGE THE WHOLE THING IF YOU LIKE!!
     # YOU CAN DESIGN THIS DIFFERENTLY IF IT SUITS YOU
     run_commands_on_tree(TreeNode("root"))
+    f = Folder()
 
 if __name__ == "__main__":
     run_directories_program()
